@@ -124,7 +124,7 @@ class Hub:
     async def _send_error(
         self, websocket: ws.WebSocketServerProtocol, error: Exception
     ) -> None:
-        update = json.dumps({"event": Event.GENERAL.ERROR, "data": str(error)})
+        update = json.dumps({"event": Event.GENERAL.ERROR.value, "data": str(error)})
         await websocket.send(update)
 
     async def __handler_loop(
@@ -319,7 +319,7 @@ class Hub:
         event: Event.GENERAL | Event.PUBLISHER | Event.SUBSCRIBER,
         data: Any = None,
     ) -> None:
-        message = {"event": event}
+        message = {"event": event.value}
 
         if data is not None:
             message["data"] = data

@@ -30,7 +30,7 @@ class Client:
         event: Event.GENERAL | Event.PUBLISHER | Event.SUBSCRIBER,
         data: Any = None,
     ) -> None:
-        update = {"event": event}
+        update = {"event": event.value}
 
         if data is not None:
             update["data"] = data
