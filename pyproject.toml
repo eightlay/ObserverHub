@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "obshub"
+version = "0.0.1"
+authors = [
+  { name="Timur Dzhalalov", email="timurdzhalalov@yahoo.com" },
+]
+description = "This project serves as a centralized hub for orchestrating the interactions dictated by the Observer pattern in a well-organized and customizable manner"
+readme = "README.md"
+requires-python = ">=3.12"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/eightlay/ObserverHub"
+Issues = "https://github.com/eightlay/ObserverHub/issues"
